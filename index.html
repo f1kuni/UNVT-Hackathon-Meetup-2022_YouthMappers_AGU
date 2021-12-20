@@ -34,15 +34,26 @@
              style: {
                  'version': 8,
                  'sources': {
-                     'raster-tiles': {
-                         'type': 'raster',
-                         'tiles': [
-                             'https://klokantech.github.io/naturalearthtiles/tiles/natural_earth_2_shaded_relief.raster/{z}/{x}/{y}.png'
-                         ],
+                     'vector-tiles': {
+                         'type': 'vector',
+                         'url': "https://api.maptiler.com/tiles/v3/tiles.json?key={key}"
+                     },
+                      
                          'tileSize': 256,
                          'attribution':
                              'Map tiles by <a target="_top" rel="noopener" href="http://furuhashilab.com/">Furuhashi Lab.</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-                     
+                     },
+                     'kokudochiriin': {
+                         'type': 'raster',
+                         'tiles': [
+                             'https://tiles.openaerialmap.org/61a20d61ca228100065cb956/0/61a20d61ca228100065cb957/{z}/{x}/{y}'
+                         ],
+                         'Izuooshima': {
+                         'type': 'raster',
+                         'tiles': [
+                             ''
+                         ],
+                         'tileSize': 256,
                          // 'attribution':
                          //     'Map tiles by <a target="_top" rel="noopener" href="http://stamen.com">Stamen Design</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
                      }
