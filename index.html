@@ -34,20 +34,20 @@
              style: {
                  'version': 8,
                  'sources': {
-                     'vector-tiles': {
-                         'type': 'vector',
-                         'url': "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/{z}/{x}/{y}.pbf"
-                     },
-                      
+                     'raster-tiles': {
+                         'type': 'raster',
+                         'tiles': [
+                             'https://dronebird.github.io/oam_sagamihara20211215aoyamauniv1155mapconcierge00arw01/xyztiles/{z}/{x}/{y}.png'
+                         ],
                          'tileSize': 256,
                          'attribution':
                              'Map tiles by <a target="_top" rel="noopener" href="http://furuhashilab.com/">Furuhashi Lab.</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>, under <a target="_top" rel="noopener" href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
                      },
-                    //  'kokudochiriin': {
-                    //      'type': 'raster',
-                    //      'tiles': [
-                    //          'https://tiles.openaerialmap.org/61a20d61ca228100065cb956/0/61a20d61ca228100065cb957/{z}/{x}/{y}'
-                    //      ],
+                     'kokudochiriin': {
+                         'type': 'raster',
+                         'tiles': [
+                             'https://tiles.openaerialmap.org/61a20d61ca228100065cb956/0/61a20d61ca228100065cb957/{z}/{x}/{y}'
+                         ],
                          'Izuooshima': {
                          'type': 'raster',
                          'tiles': [
@@ -60,17 +60,17 @@
                  },
 
                  'layers': [
-                    //  {
-                    //      'id': 'lowest-background',
-                    //      'source': 'Japan',
-                    //      'type': 'raster'
-                    //  },
+                     {
+                         'id': 'lowest-background',
+                         'source': 'Japan',
+                         'type': 'raster'
+                     },
                      {
                          'id': 'simple-tiles',
-                         'type': 'vector',
-                         'source': 'vector-tiles',
-                        //  'minzoom': 0,
-                        //  'maxzoom': 22
+                         'type': 'raster',
+                         'source': 'raster-tiles',
+                         'minzoom': 0,
+                         'maxzoom': 22
                      }
                  ]
              },
